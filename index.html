@@ -19,22 +19,18 @@
 </head>
 
 <body>
-    <div class="tp">
-        <a href="https://www.google.com/" target="_blank"><img src="https://fakeimg.pl/250x200/" alt=""></a>
-    </div>
     <div id="app">
         <h2>hello, gogo :)</h2>
-
-        <div class="test">
+        <!-- <div class="test">
             <a href="#">hello</a><a href="#">bbbb</a>
-        </div>
+        </div> -->
         <h3>help, {{name}} ~~</h3>
         <h4> computed: {{doubleNum}}</h4>
-        <form action="/xxx" method="post">
+        <!-- <form action="/xxx" method="post">
             <label for="myName">姓名：</label>
             <input id="myName" type="text" name="NewInput" />
             <button type="submit">送出</button>
-        </form>
+        </form> -->
         <button type="button" @click="$refs.carda.test()"> testBtn </button>
         <card-tmp ref="carda" :ininfo="info" @testemit="receiveInfo"></card-tmp>
         <!-- <card2></card2> -->
