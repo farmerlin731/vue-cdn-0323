@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appwork-test-0321-15:37~16:13</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding:0
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+
+        li {
+            flex: 1;
+            text-align: center;
+            border-collapse: collapse;
+            height: 50px;
+            line-height: 50px;
+        }
+        .canvas{
+            height: calc(100vh - 50px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- 算是了結一個心魔吧... 有點感動 -->
+        <ul>
+            <li v-for="item in nav" :style="{backgroundColor:item,color}" @click="changeColor(item)">{{item}}</li>
+        </ul>
+        <div class="canvas" :style="{backgroundColor:tmpColor}">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                name: 'default',
+                nav: ['red', 'blue', 'green','salmon'],
+                tmpColor:'white',
+                color:"purple"
+            }
+        },
+        methods:{
+            changeColor(color){
+                this.tmpColor = color;
+            }
+        },
+        mounted() {
+            this.name = 'farmer';
+        }
+    });
+
+    app.mount('#app');
+</script>
+
+</html>

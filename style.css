@@ -1,0 +1,11 @@
+a {
+  font-size: 20px;
+  color: white;
+  padding: 50px;
+  background-color: green;
+}
+@media (max-width: 800px) {
+  a {
+    background-color: blueviolet;
+  }
+}/*# sourceMappingURL=style.css.map */
